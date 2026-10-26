@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINPATH - Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><i class="fa-solid fa-chart-line"></i> FINPATH</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="dashboard.html" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+          <li><a href="assessment.html"><i class="fa-solid fa-clipboard-list"></i> Assessment</a></li>
+          <li><a href="prediction.html"><i class="fa-solid fa-chart-pie"></i> Predictions</a></li>
+          <li><a href="recommendations.html"><i class="fa-solid fa-lightbulb"></i> Recommendations</a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="welcome-banner">
+      <h1>Welcome Back, <span id="userName">User</span></h1>
+      <p>Overview of your financial inclusion assessments, risk score, and system recommendations.</p>
+    </section>
+
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <i class="fa-solid fa-shield-halved metric-icon"></i>
+        <div class="metric-info">
+          <h3>Risk Assessment Score</h3>
+          <p class="metric-value" id="latestScore">--</p>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <i class="fa-solid fa-clipboard-check metric-icon"></i>
+        <div class="metric-info">
+          <h3>Total Assessments</h3>
+          <p class="metric-value" id="totalAssessments">0</p>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <i class="fa-solid fa-list-check metric-icon"></i>
+        <div class="metric-info">
+          <h3>Active Recommendations</h3>
+          <p class="metric-value" id="activeRecommendations">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-actions">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <a href="assessment.html" class="btn-primary"><i class="fa-solid fa-plus"></i> New Assessment</a>
+        <a href="prediction.html" class="btn-outline"><i class="fa-solid fa-file-lines"></i> View Latest Prediction</a>
+        <a href="analytics.html" class="btn-outline"><i class="fa-solid fa-chart-line"></i> View Financial Analytics</a>
+      </div>
+    </section>
+
+    <section class="recent-activity">
+      <h2>Recent Assessment History</h2>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Income</th>
+              <th>Expenses</th>
+              <th>Risk Level</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody">
+            <tr>
+              <td colspan="5" class="empty-state">No assessments submitted yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FINPATH — Marion</p>
+  </footer>
+
+</body>
+</html>

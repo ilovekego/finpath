@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINPATH - Prediction Results</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/assessment.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><i class="fa-solid fa-chart-line"></i> FINPATH</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+          <li><a href="assessment.html"><i class="fa-solid fa-clipboard-list"></i> Assessment</a></li>
+          <li><a href="prediction.html" class="active"><i class="fa-solid fa-chart-pie"></i> Predictions</a></li>
+          <li><a href="recommendations.html"><i class="fa-solid fa-lightbulb"></i> Recommendations</a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="assessment-header">
+      <h1>Machine Learning Risk Assessment Results</h1>
+      <p>Analysis powered by machine learning algorithms and explainability models.</p>
+    </section>
+
+    <div class="card">
+      <div class="result-summary">
+        <h2>Overall Risk Status</h2>
+        <div class="status-badge" id="riskBadge">Pending Assessment</div>
+        <p class="score-display">Confidence Score: <span id="confidenceScore">--%</span></p>
+      </div>
+
+      <div class="explainability-section">
+        <h2><i class="fa-solid fa-magnifying-glass-chart"></i> Feature Importance (Explainable ML)</h2>
+        <p>Key financial factors contributing to this prediction result:</p>
+        <ul class="feature-list" id="featureImportanceList">
+          <li class="empty-state">No active prediction results to display. Please submit an assessment first.</li>
+        </ul>
+      </div>
+
+      <div class="form-actions">
+        <a href="assessment.html" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> New Assessment</a>
+        <a href="recommendations.html" class="btn-primary"><i class="fa-solid fa-lightbulb"></i> View Recommendations</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FINPATH — Marion</p>
+  </footer>
+
+</body>
+</html>

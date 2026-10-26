@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINPATH - Admin Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="admin.html" class="logo"><i class="fa-solid fa-chart-line"></i> FINPATH Admin</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="admin.html" class="active"><i class="fa-solid fa-sliders"></i> Overview</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="welcome-banner">
+      <h1>Administrative Dashboard</h1>
+      <p>System-wide view of registrations, risk metrics, and application performance.</p>
+    </section>
+
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <i class="fa-solid fa-users metric-icon"></i>
+        <div class="metric-info">
+          <h3>Total Users</h3>
+          <p class="metric-value" id="adminTotalUsers">0</p>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <i class="fa-solid fa-clipboard-check metric-icon"></i>
+        <div class="metric-info">
+          <h3>Total Assessments</h3>
+          <p class="metric-value" id="adminTotalAssessments">0</p>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <i class="fa-solid fa-triangle-exclamation metric-icon"></i>
+        <div class="metric-info">
+          <h3>High Risk Flagged</h3>
+          <p class="metric-value" id="adminHighRiskCount">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent-activity">
+      <h2>All User Assessments</h2>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User ID</th>
+              <th>Assessment Date</th>
+              <th>Income</th>
+              <th>Risk Assessment</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <tr>
+              <td colspan="5" class="empty-state">No user records loaded.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FINPATH — Marion</p>
+  </footer>
+
+</body>
+</html>

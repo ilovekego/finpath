@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINPATH - Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/assessment.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><i class="fa-solid fa-chart-line"></i> FINPATH</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+          <li><a href="assessment.html"><i class="fa-solid fa-clipboard-list"></i> Assessment</a></li>
+          <li><a href="prediction.html"><i class="fa-solid fa-chart-pie"></i> Predictions</a></li>
+          <li><a href="recommendations.html"><i class="fa-solid fa-lightbulb"></i> Recommendations</a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+          <li><a href="profile.html" class="active"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="assessment-header">
+      <h1>User Profile</h1>
+      <p>Manage your account settings and credentials.</p>
+    </section>
+
+    <div class="card">
+      <form id="profileForm">
+        <div class="form-group">
+          <label for="profileName"><i class="fa-solid fa-id-card"></i> Full Name</label>
+          <input type="text" id="profileName" name="profileName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profileEmail"><i class="fa-solid fa-envelope"></i> Email Address</label>
+          <input type="email" id="profileEmail" name="profileEmail" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="profileRole"><i class="fa-solid fa-user-shield"></i> User Role</label>
+          <input type="text" id="profileRole" name="profileRole" value="User" readonly>
+        </div>
+
+        <div id="profileMessage" class="error-message"></div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Profile</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FINPATH — Marion</p>
+  </footer>
+
+</body>
+</html>

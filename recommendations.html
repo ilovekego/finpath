@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINPATH - Recommendations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><i class="fa-solid fa-chart-line"></i> FINPATH</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+          <li><a href="assessment.html"><i class="fa-solid fa-clipboard-list"></i> Assessment</a></li>
+          <li><a href="prediction.html"><i class="fa-solid fa-chart-pie"></i> Predictions</a></li>
+          <li><a href="recommendations.html" class="active"><i class="fa-solid fa-lightbulb"></i> Recommendations</a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="welcome-banner">
+      <h1>Personalized Recommendations</h1>
+      <p>Tailored financial action items to lower financial risk and enhance economic stability.</p>
+    </section>
+
+    <section class="recommendations-container" id="recommendationsList">
+      <div class="card">
+        <i class="fa-solid fa-circle-info info-icon"></i>
+        <p class="empty-state">No recommendation data available. Submit a financial assessment to generate personalized insights.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 FINPATH — Marion</p>
+  </footer>
+
+</body>
+</html>
